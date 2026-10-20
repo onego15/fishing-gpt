@@ -1,0 +1,40 @@
+const {chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
+const fs=require('node:fs');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge'});
+ const context=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:1});
+ const page=await context.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:4187');
+ await page.waitForFunction(()=>document.querySelector('#world')&&document.querySelector('#loading').textContent.includes('できました'));
+ await page.screenshot({path:'docs/title.png'});
+ await page.click('#startBtn');
+ await page.screenshot({path:'docs/gameplay.png'});
+ await page.click('#actionBtn');
+ await page.waitForFunction(()=>window.lumenlake.state==='bite',{},{timeout:10000});
+ await page.keyboard.press('Space');
+ await page.screenshot({path:'docs/fishing.png'});
+ const start=Date.now();
+ while(Date.now()-start<25000){
+  const data=await page.evaluate(()=>({state:lumenlake.state,x:lumenlake.cursor,f:lumenlake.fishPosition}));
+  if(data.state!=='fight')break;
+  if(data.x<data.f)await page.keyboard.down('Space');else await page.keyboard.up('Space');
+  await page.waitForTimeout(45);
+ }
+ await page.keyboard.up('Space');
+ if(await page.evaluate(()=>lumenlake.state)!=='catch')throw new Error('Actual keyboard fishing failed');
+ await page.screenshot({path:'docs/catch.png'});
+ await page.click('#keepBtn');
+ await page.click('#bookBtn');await page.screenshot({path:'docs/journal.png'});await page.click('#closeModal');
+ await page.click('#shopBtn');await page.screenshot({path:'docs/workshop.png'});await page.click('#closeModal');
+ const saved=await page.evaluate(()=>lumenlake.save);
+ await page.reload();await page.click('#startBtn');
+ if(await page.evaluate(()=>lumenlake.save.catches)!==saved.catches)throw new Error('Save persistence failed');
+ await page.click('#restBtn');await page.click('#nextPhase');
+ await page.screenshot({path:'docs/night.png'});
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'docs/mobile.png'});
+ await page.click('#helpBtn');await page.screenshot({path:'docs/mobile-help.png'});
+ fs.writeFileSync('docs/qa-results.json',JSON.stringify({date:new Date().toISOString(),browser:browser.version(),checks:['asset loaded','keyboard cast and hook','held/released keyboard minigame won','catch reward','journal','workshop','save reload','rest to night','390x844 mobile layout'],errors,save:saved},null,2));
+ console.log(JSON.stringify({errors,save:saved},null,2));
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

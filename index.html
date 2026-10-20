@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a232b">
+  <meta name="description" content="星凪の湖。光を釣り、夜をほどく。幻想的な湖を巡る、小さな釣りの旅。">
+  <title>星凪の湖 — LUMENLAKE</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game">
+  <canvas id="world" aria-label="幻想的な星凪の湖、釣り人と動く水面"></canvas>
+  <div class="vignette"></div>
+  <header>
+    <div class="wordmark"><span class="emblem">✧</span><div><h1>星凪の湖</h1><span class="latin">L U M E N L A K E</span></div></div>
+    <div class="environment"><span id="phaseIcon">◒</span><div><strong id="phase">夕暮れ</strong><small id="weather">晴れ · 水面はおだやか</small></div><span class="day" id="day">DAY 01</span></div>
+    <div class="currency"><span>✧</span> <strong id="coins">0</strong><small>星のかけら</small></div>
+  </header>
+  <aside class="quest"><span class="eyebrow">THE LAKE REMEMBERS</span><h2 id="questTitle">湖に、星を還す。</h2><p id="questText">6種の魚と出会い、竿を2回強化する。<br>夜の湖に、星の主が現れるという。</p><div class="questTrack"><i id="questProgress"></i></div><small id="questCount">魚の記憶 0 / 6</small></aside>
+  <div class="location"><span>01 / THE LANTERN PIER</span><h2>灯守の桟橋</h2><p>風がやみ、湖が目を覚ます。</p></div>
+  <nav aria-label="ゲームメニュー"><button id="bookBtn"><span>▤</span>魚の図鑑 <kbd>J</kbd><b id="bookCount">0/8</b></button><button id="shopBtn"><span>♧</span>道具の工房 <kbd>U</kbd></button><button id="restBtn"><span>◷</span>時を待つ</button><button id="soundBtn" aria-label="音の切り替え" aria-pressed="false"><span>♪</span><span id="soundLabel">音 OFF</span></button><button id="helpBtn" aria-label="遊び方">?</button></nav>
+  <section class="interaction" id="interaction"><div class="stateLabel" id="stateLabel">A MOMENT OF STILLNESS</div><p id="message">ひと投げから、物語がはじまる。</p><button class="primary" id="actionBtn"><span id="actionText">釣り糸をたらす</span><kbd>SPACE</kbd></button><small id="hint">クリック / SPACE でキャスト</small></section>
+  <section id="fight" hidden aria-label="釣りのミニゲーム"><div class="fightTop"><span id="fishBehavior">魚の動きを追いかけよう</span><strong id="catchPercent">0%</strong></div><div class="track"><div id="zone"></div><span id="fishMarker">◆</span></div><div class="reelProgress"><i id="reelFill"></i></div><p><kbd>SPACE</kbd> / ボタン長押しで右へ、離すと左へ <span id="tensionLabel">光の帯に魚を入れる</span></p><button id="reelBtn" class="primary">長押ししてリールを巻く</button></section>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <footer><span>✦ AUTOMATICALLY SAVED</span><span>光を釣り、夜をほどく。</span><button id="fullscreenBtn" aria-label="全画面">⛶</button></footer>
+  <div id="intro" class="overlay">
+    <section class="introCard"><span class="eyebrow">A SMALL JOURNEY BETWEEN DAY & NIGHT</span><div class="ornament">— ✧ —</div><h2>星凪の湖</h2><p class="introLatin">L U M E N L A K E</p><p class="introPoem">夜をなくした湖に、<br>もう一度、星を灯す。</p><p class="introText">あなたは旅する灯守。<br>魚たちの記憶を集め、湖の主を探しましょう。</p><button id="startBtn" class="primary">湖畔へ向かう <span>→</span></button><small>10–15分の小さな旅 · ヘッドホン推奨</small><span id="loading">湖の風景を準備しています…</span></section>
+  </div>
+  <div id="modal" class="overlay" hidden><section class="panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="closeModal" aria-label="閉じる">×</button><div id="modalBody"></div></section></div>
+</main>
+<script src="game.js"></script>
+</body></html>

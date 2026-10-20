@@ -1,0 +1,322 @@
+{
+  "browser": "155.0.4283.62",
+  "elapsedSeconds": 110.491,
+  "errors": [],
+  "result": {
+    "version": 1,
+    "coins": 148,
+    "rod": 2,
+    "charm": 0,
+    "fish": {
+      "jade": {
+        "count": 2,
+        "best": 29.8
+      },
+      "veil": {
+        "count": 2,
+        "best": 27.3
+      },
+      "amber": {
+        "count": 1,
+        "best": 18.9
+      },
+      "star": {
+        "count": 1,
+        "best": 20.4
+      },
+      "moon": {
+        "count": 1,
+        "best": 33.2
+      },
+      "sun": {
+        "count": 1,
+        "best": 33.1
+      },
+      "guardian": {
+        "count": 1,
+        "best": 83.3
+      }
+    },
+    "time": 734.4246999999964,
+    "catches": 9,
+    "complete": true
+  },
+  "log": [
+    {
+      "fish": "jade",
+      "save": {
+        "version": 1,
+        "coins": 20,
+        "rod": 0,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 1,
+            "best": 24.9
+          }
+        },
+        "time": 9.667899999999985,
+        "catches": 1,
+        "complete": false
+      }
+    },
+    {
+      "fish": "jade",
+      "save": {
+        "version": 1,
+        "coins": 40,
+        "rod": 0,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          }
+        },
+        "time": 20.77329999999997,
+        "catches": 2,
+        "complete": false
+      }
+    },
+    {
+      "fish": "veil",
+      "save": {
+        "version": 1,
+        "coins": 64,
+        "rod": 0,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 1,
+            "best": 25
+          }
+        },
+        "time": 32.44809999999991,
+        "catches": 3,
+        "complete": false
+      }
+    },
+    {
+      "fish": "amber",
+      "save": {
+        "version": 1,
+        "coins": 18,
+        "rod": 1,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 1,
+            "best": 25
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          }
+        },
+        "time": 42.98270000000012,
+        "catches": 4,
+        "complete": false
+      }
+    },
+    {
+      "fish": "star",
+      "save": {
+        "version": 1,
+        "coins": 56,
+        "rod": 1,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 1,
+            "best": 25
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          },
+          "star": {
+            "count": 1,
+            "best": 20.4
+          }
+        },
+        "time": 189.70120000000153,
+        "catches": 5,
+        "complete": false
+      }
+    },
+    {
+      "fish": "moon",
+      "save": {
+        "version": 1,
+        "coins": 86,
+        "rod": 1,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 1,
+            "best": 25
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          },
+          "star": {
+            "count": 1,
+            "best": 20.4
+          },
+          "moon": {
+            "count": 1,
+            "best": 33.2
+          }
+        },
+        "time": 200.14690000000357,
+        "catches": 6,
+        "complete": false
+      }
+    },
+    {
+      "fish": "sun",
+      "save": {
+        "version": 1,
+        "coins": 114,
+        "rod": 1,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 1,
+            "best": 25
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          },
+          "star": {
+            "count": 1,
+            "best": 20.4
+          },
+          "moon": {
+            "count": 1,
+            "best": 33.2
+          },
+          "sun": {
+            "count": 1,
+            "best": 33.1
+          }
+        },
+        "time": 370.93879999999893,
+        "catches": 7,
+        "complete": false
+      }
+    },
+    {
+      "fish": "veil",
+      "save": {
+        "version": 1,
+        "coins": 28,
+        "rod": 2,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 2,
+            "best": 27.3
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          },
+          "star": {
+            "count": 1,
+            "best": 20.4
+          },
+          "moon": {
+            "count": 1,
+            "best": 33.2
+          },
+          "sun": {
+            "count": 1,
+            "best": 33.1
+          }
+        },
+        "time": 550.6261999999971,
+        "catches": 8,
+        "complete": false
+      }
+    },
+    {
+      "fish": "guardian",
+      "save": {
+        "version": 1,
+        "coins": 148,
+        "rod": 2,
+        "charm": 0,
+        "fish": {
+          "jade": {
+            "count": 2,
+            "best": 29.8
+          },
+          "veil": {
+            "count": 2,
+            "best": 27.3
+          },
+          "amber": {
+            "count": 1,
+            "best": 18.9
+          },
+          "star": {
+            "count": 1,
+            "best": 20.4
+          },
+          "moon": {
+            "count": 1,
+            "best": 33.2
+          },
+          "sun": {
+            "count": 1,
+            "best": 33.1
+          },
+          "guardian": {
+            "count": 1,
+            "best": 83.3
+          }
+        },
+        "time": 734.4246999999964,
+        "catches": 9,
+        "complete": true
+      }
+    }
+  ],
+  "checks": [
+    "full unmodified progression",
+    "two rod upgrades",
+    "six species gate",
+    "legendary encounter",
+    "ending",
+    "charm purchase",
+    "missed bite recovery",
+    "escape cancel"
+  ]
+}

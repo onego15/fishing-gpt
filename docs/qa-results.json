@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-20T10:15:57.473Z",
+  "browser": "155.0.4283.62",
+  "checks": [
+    "asset loaded",
+    "keyboard cast and hook",
+    "held/released keyboard minigame won",
+    "catch reward",
+    "journal",
+    "workshop",
+    "save reload",
+    "rest to night",
+    "390x844 mobile layout"
+  ],
+  "errors": [],
+  "save": {
+    "version": 1,
+    "coins": 14,
+    "rod": 0,
+    "charm": 0,
+    "fish": {
+      "amber": {
+        "count": 1,
+        "best": 21
+      }
+    },
+    "time": 12.2669,
+    "catches": 1,
+    "complete": false
+  }
+}

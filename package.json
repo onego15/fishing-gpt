@@ -1,0 +1,7 @@
+{
+  "name": "lumenlake",
+  "version": "1.0.0",
+  "private": true,
+  "description": "星凪の湖 — a small atmospheric fishing journey",
+  "scripts": { "start": "node server.cjs", "check": "node --check game.js && node --check server.cjs" }
+}
