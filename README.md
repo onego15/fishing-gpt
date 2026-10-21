@@ -10,6 +10,10 @@ GIFは実行中のゲームをMicrosoft Edgeで操作し、DOMとCanvasをその
 
 ## プレイする
 
+**[ブラウザで今すぐプレイ（GitHub Pages）](https://onego15.github.io/fishing-gpt/)**
+
+インストール不要で遊べます。以下はローカルで起動する場合の手順です。
+
 Node.js 18以降を用意し、このフォルダーで実行してください。ゲーム自体の依存パッケージのインストールは不要です。
 
 ```sh
@@ -22,7 +26,7 @@ npm start
 - 別ポートを使う場合、PowerShellでは `$env:PORT=5000; npm start`。
 - 保存はブラウザのlocalStorageに自動記録されます。端末・ブラウザ・接続元URLごとに別のセーブです。
 - 外部フォントを取得できないときは端末の明朝体に切り替わります。ゲーム本体・背景・効果音は外部サービスを必要としません。
-- ソースリポジトリ：[onego15/fishing-gpt](https://github.com/onego15/fishing-gpt)。ホスティングサービスへのゲーム公開は行っていません。
+- ソースリポジトリ：[onego15/fishing-gpt](https://github.com/onego15/fishing-gpt)。`main`へのpushでGitHub Actionsがゲームに必要なファイルをGitHub Pagesへ自動公開します。
 
 ## 特徴
 
@@ -196,4 +200,8 @@ READMEには、比較実験の記録として以下を記載してください�
 ```text
 [https://github.com/onego15/fishing-gpt.git](https://github.com/onego15/fishing-gpt.git)
 にpush
+```
+
+```text
+GitHub Pagesで公開する
 ```
